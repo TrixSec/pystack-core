@@ -5,13 +5,13 @@ A unified runtime layer that provides essential application infrastructure
 through a single, coherent API.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 
-from py_core.app import App, AppConfig
-from py_core.config import Config
-from py_core.container import Container
-from py_core.middleware import MiddlewarePipeline
-from py_core.logging import Logger, LogLevel
+from .app import App, AppConfig
+from .config import Config
+from .container import Container
+from .middleware import MiddlewarePipeline
+from .logging import Logger, LogLevel
 
 __all__ = [
     "App",

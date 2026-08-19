@@ -7,10 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- Full documentation suite (API.md, USAGE.md, CHANGELOG.md)
-- Example projects demonstrating core features
-- Performance benchmarking suite
+## [0.1.2] - 2024-01-01
+
+### Changed
+- Moved internal documentation to internal_docs folder
+- Cleaned up repository structure
+- Fixed package directory and imports
+
+## [0.1.1] - 2024-01-01
+
+### Changed
+- Renamed package from py_core to pystack_core
+- Updated all imports and references
+- Updated GitHub repository to pystack-core
+- Fixed internal imports to use relative imports
 
 ## [0.1.0] - 2024-01-01
 

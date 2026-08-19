@@ -2,10 +2,10 @@
 Logging module - Production-ready structured logging with automatic context injection
 """
 
-from py_core.logging.logger import Logger
-from py_core.logging.interfaces import LogLevel, LogHandler, LogFormatter
-from py_core.logging.formatters import ConsoleFormatter, JSONFormatter, TextFormatter
-from py_core.logging.handlers import ConsoleHandler, FileHandler, AsyncQueueHandler
+from .logger import Logger
+from .interfaces import LogLevel, LogHandler, LogFormatter
+from .formatters import ConsoleFormatter, JSONFormatter, TextFormatter
+from .handlers import ConsoleHandler, FileHandler, AsyncQueueHandler
 
 __all__ = [
     "Logger",
