@@ -38,7 +38,7 @@ pip install pystack-core
 ## Quick Start
 
 ```python
-from py_core import App
+from pystack_core import App
 
 app = App()
 
@@ -70,6 +70,7 @@ app.logger.info("Fetched users", count=len(users))
 
 - **[Usage Guide](USAGE.md)** - Comprehensive usage examples and patterns
 - **[API Documentation](docs/API.md)** - Complete API reference
+- **[v0.2.0 Features](docs/V0.2.0_FEATURES.md)** - Latest release features
 - **[Changelog](CHANGELOG.md)** - Version history and changes
 - **[Examples](examples/)** - Working code examples
 
@@ -77,7 +78,7 @@ app.logger.info("Fetched users", count=len(users))
 
 ```python
 import asyncio
-from py_core import App, AppConfig
+from pystack_core import App, AppConfig
 
 async def main():
     # Create application with configuration
@@ -102,25 +103,49 @@ asyncio.run(main())
 
 For more examples, see the [examples](examples/) directory.
 
-## v0.1.0 Features
+## v0.2.0 Features
 
-The current release (v0.1.0) includes production-ready implementations of:
+The current release (v0.2.0) includes production-ready implementations of:
 
-### Core Runtime
+### HTTP Client
+- Automatic retry with exponential backoff
+- Configurable timeout management
+- Metrics collection (requests, success rate, latency)
+- Circuit breaker for fault tolerance
+- Basic auth and bearer token support
+- Middleware pipeline for request/response processing
+
+### Cache System
+- Multi-backend support (Memory, Redis, Disk)
+- TTL support with automatic expiration
+- LRU eviction for memory cache
+- Statistics tracking (hit rate, cache size)
+- Batch operations for efficiency
+- Cache manager for unified backend management
+
+### Database System
+- SQLite and PostgreSQL support
+- Transaction management with context managers
+- Connection pooling support
+- Structured query results with metadata
+- Batch query execution
+- Database manager for unified backend management
+
+### Core Runtime (from v0.1.0)
 - Application lifecycle management with async support
 - Dependency injection container with singleton/transient resolution
 - Middleware pipeline for cross-cutting concerns
 - Context management for application state
 - Startup and shutdown hooks with error isolation
 
-### Configuration System
+### Configuration System (from v0.1.0)
 - Multi-source configuration loading (environment, YAML, JSON, TOML)
 - Automatic type conversion (strings to bool, int, float, JSON)
 - Pydantic schema validation with detailed error reporting
 - Smart configuration merging from multiple sources
 - Nested configuration value management
 
-### Logging System
+### Logging System (from v0.1.0)
 - Structured logging with automatic context injection
 - Multiple formatters (console with colors, JSON, text)
 - Async logging with queue-based processing for high performance
@@ -130,19 +155,22 @@ The current release (v0.1.0) includes production-ready implementations of:
 
 ## Performance
 
-pystack-core v0.1.0 is designed for high-performance scenarios:
+pystack-core v0.2.0 is designed for high-performance scenarios:
 
 - **Logging:** 10,000+ logs/sec throughput
 - **Configuration:** 1,000+ loads/sec
 - **App startup:** <1 second
 - **App shutdown:** <1 second
 - **Dependency resolution:** 10,000+ resolutions/sec
+- **HTTP client:** Sub-millisecond request overhead
+- **Cache operations:** 100,000+ ops/sec (memory backend)
+- **Database queries:** Optimized with connection pooling
 
 ## Testing
 
 The project includes comprehensive test coverage:
 
-- **79 tests** covering all core functionality
+- **100+ tests** covering all core functionality
 - **Integration tests** for all modules
 - **Performance benchmarks** meeting production targets
 - **Memory efficiency tests**
@@ -152,7 +180,7 @@ The project includes comprehensive test coverage:
 pytest
 
 # Run with coverage
-pytest --cov=py_core
+pytest --cov=pystack_core
 ```
 
 ## Development
@@ -160,7 +188,7 @@ pytest --cov=py_core
 ```bash
 # Clone the repository
 git clone https://github.com/TrixSec/pystack-core.git
-cd py_core
+cd pystack-core
 
 # Install development dependencies
 pip install -e ".[dev]"
@@ -169,9 +197,9 @@ pip install -e ".[dev]"
 pytest
 
 # Run linting
-ruff check py_core
-black py_core
-mypy py_core
+ruff check pystack_core
+black pystack_core
+mypy pystack_core
 ```
 
 ## Contributing

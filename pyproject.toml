@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pystack-core"
-version = "0.1.2"
+version = "0.2.0"
 description = "Operating System for Python Applications - Unified runtime layer with configuration, logging, HTTP, caching, databases, AI, and more."
 readme = "README.md"
 requires-python = ">=3.9"
