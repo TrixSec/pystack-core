@@ -8,7 +8,7 @@ from typing import Optional, Dict, Any, List, Union
 from dataclasses import dataclass
 import sqlite3
 
-from .interfaces import DatabaseInterface, DatabaseBackend, QueryResult
+from pystack_core.database.interfaces import DatabaseInterface, DatabaseBackend, QueryResult
 
 
 class SQLiteDatabase(DatabaseInterface):

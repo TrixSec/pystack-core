@@ -7,14 +7,14 @@ through a single, coherent API.
 
 __version__ = "0.2.0"
 
-from .app import App, AppConfig
-from .config import Config
-from .container import Container
-from .middleware import MiddlewarePipeline
-from .logging import Logger, LogLevel
-from .http import HttpClient, HTTPMethod
-from .cache import CacheManager, MemoryCache, CacheBackend
-from .database import DatabaseManager, SQLiteDatabase, DatabaseBackend
+from pystack_core.app import App, AppConfig
+from pystack_core.config import Config
+from pystack_core.container import Container
+from pystack_core.middleware import MiddlewarePipeline
+from pystack_core.logging import Logger, LogLevel
+from pystack_core.http import HttpClient, HTTPMethod
+from pystack_core.cache import CacheManager, MemoryCache, CacheBackend
+from pystack_core.database import DatabaseManager, SQLiteDatabase, DatabaseBackend
 
 __all__ = [
     "App",

@@ -8,7 +8,7 @@ from typing import Optional, Dict, Any, Callable, List
 from dataclasses import dataclass, field
 import httpx
 
-from .interfaces import (
+from pystack_core.http.interfaces import (
     HttpClientInterface, HTTPRequest, HTTPResponse, HTTPMethod
 )
 

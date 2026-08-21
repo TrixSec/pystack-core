@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 from collections import OrderedDict
 import hashlib
 
-from .interfaces import CacheInterface, CacheBackend, CacheStats
+from pystack_core.cache.interfaces import CacheInterface, CacheBackend, CacheStats
 
 
 class MemoryCache(CacheInterface):

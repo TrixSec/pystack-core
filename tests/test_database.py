@@ -4,9 +4,12 @@ Tests for Database module
 
 import pytest
 import asyncio
-from pystack_core.database import (
+from pystack_core.database.database import (
     SQLiteDatabase, PostgreSQLDatabase, DatabaseManager,
-    DatabaseInterface, DatabaseBackend, QueryResult, DatabaseError, Transaction
+    DatabaseError, Transaction
+)
+from pystack_core.database.interfaces import (
+    DatabaseInterface, DatabaseBackend, QueryResult
 )
 
 

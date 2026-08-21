@@ -4,7 +4,7 @@ Tests for HTTP Client module
 
 import pytest
 import asyncio
-from pystack_core.http import (
+from pystack_core.http.client import (
     HttpClient, HTTPRequest, HTTPResponse, HTTPMethod,
     RetryPolicy, CircuitBreaker, CircuitBreakerError, HTTPError
 )

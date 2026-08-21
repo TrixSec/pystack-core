@@ -2,8 +2,8 @@
 Database module - Multi-backend database support with SQLite and PostgreSQL
 """
 
-from .database import SQLiteDatabase, PostgreSQLDatabase, DatabaseManager, DatabaseError, Transaction
-from .interfaces import DatabaseInterface, DatabaseBackend, QueryResult
+from pystack_core.database.database import SQLiteDatabase, PostgreSQLDatabase, DatabaseManager, DatabaseError, Transaction
+from pystack_core.database.interfaces import DatabaseInterface, DatabaseBackend, QueryResult
 
 __all__ = [
     "SQLiteDatabase",

@@ -4,8 +4,10 @@ Tests for Cache module
 
 import pytest
 import asyncio
-from pystack_core.cache import (
-    MemoryCache, RedisCache, DiskCache, CacheManager,
+from pystack_core.cache.cache import (
+    MemoryCache, RedisCache, DiskCache, CacheManager
+)
+from pystack_core.cache.interfaces import (
     CacheInterface, CacheBackend, CacheStats
 )
 

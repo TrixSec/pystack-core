@@ -8,7 +8,7 @@ from typing import Optional
 from datetime import datetime
 from pathlib import Path
 
-from .logger import LogHandler, LogEntry, LogFormatter, JSONFormatter
+from pystack_core.logging.logger import LogHandler, LogEntry, LogFormatter, JSONFormatter
 
 
 class FileHandler(LogHandler):

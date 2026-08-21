@@ -2,8 +2,8 @@
 Cache module - Multi-backend caching with memory, Redis, and disk support
 """
 
-from .cache import MemoryCache, RedisCache, DiskCache, CacheManager
-from .interfaces import CacheInterface, CacheBackend, CacheStats
+from pystack_core.cache.cache import MemoryCache, RedisCache, DiskCache, CacheManager
+from pystack_core.cache.interfaces import CacheInterface, CacheBackend, CacheStats
 
 __all__ = [
     "MemoryCache",
